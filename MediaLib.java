@@ -6,10 +6,16 @@
 public class MediaLib
 {
   private Book book;
+  private Movie movie;
 
   public void addBook(Book b)
   {
     book = b;
+  }
+
+  public void addMovie(Movie m)
+  {
+    movie = m;
   }
 
 /*Modify toString to show the state
@@ -19,7 +25,7 @@ public class MediaLib
 */
   public String toString() 
   {
-    String info = "Book added! : \n" + book.toString();
+    String info = "Book added! : \n" + book.toString() + "," + "Movie added! : \n" + movie.toString();
     
     return info;
   }
