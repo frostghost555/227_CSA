@@ -31,5 +31,12 @@ public class MediaLibRunner
     newBook = new Book("New", "title");//bookb
     //What will print on 32?
     System.out.println(newLib);
+
+    Movie myMovie = new Movie("The Matrix", "Wachowski Sisters");
+    myLib.addMovie(myMovie);
+    System.out.println("Movie added:");
+    System.out.println(myMovie);
+    System.out.println(myLib);
+
   }
 }
