@@ -18,15 +18,43 @@ public class MediaLib
     movie = m;
   }
 
+  public Book getBook()
+  {
+  return book;
+  }
+
+
 /*Modify toString to show the state
 * of the library
 * @precondition MediaLib not null
 *
 */
-  public String toString() 
-  {
-    String info = "Book added! : \n" + book.toString() + "," + "Movie added! : \n" + movie.toString();
-    
-    return info;
+public String toString()
+{
+  String info = "";
+
+  if (book == null) {
+    info += "Book: none\n";
+  } 
+  else {
+    info += "Book: " + book + "\n";
   }
+
+  if (movie == null) {
+    info += "Movie: none";
+  } 
+  else {
+    info += "Movie: " + movie;
+  }
+
+  return info;
+}
+
+public void testBook(Book tester)
+{
+  tester.setTitle("TEST TITLE");
+  System.out.println("Inside testBook: " + tester);
+}
+
+
 }
