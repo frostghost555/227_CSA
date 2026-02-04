@@ -42,6 +42,15 @@ public class Book
     return info;
   }
 
+  public boolean equals(Book b)
+  {
+    if (b == null){
+        return false;
+    }
+    return this.title.equals(b.title) && this.author.equals(b.author);
+  }
+
+
   /*** Mutator methods ***/
   public void setTitle(String t) {
     title = t;
@@ -50,6 +59,17 @@ public class Book
   public void setAuthor(String a) {
     author = a;
   }
+
+public void adjustRating(int change)
+{
+  int newRating = rating + change;
+
+  if (newRating >= 0 && newRating <= 10) {
+    rating = newRating;
+  }
+}
+
+
 
   /*
   * Set Rating
